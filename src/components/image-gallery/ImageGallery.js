@@ -14,7 +14,6 @@ const ImageGallery = () => {
       orientation === "vertical" ? "vertical" : "horizontal",
     ].join(" "),
   };
-  console.log(`Loading state ${GalleryStore.isLoading}`);
   return (
     <>
       <div {...containerProps}>
