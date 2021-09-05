@@ -1,38 +1,110 @@
 .App {
   text-align: center;
+  margin: 0 2em;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery-container {
   display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.gallery-container.horizontal {
+  flex-direction: row;
+}
+.gallery-container.vertical {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.gallery-item-container {
+  width: 20%;
+  margin: 1vh 1vw;
+  border-radius: 8px;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-item-container:hover {
+  cursor: pointer;
+}
+
+.layout-container {
+  width: 99%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: sp;
+  margin: 10vh 0;
+}
+
+.layout-button-inactive {
+  background-color: rgb(243, 244, 247);
+  border: none;
+}
+
+.layout-button-active {
+  background-color: rgb(211, 217, 230);
+  border: none;
+}
+
+.refresh-gallery {
+  align-items: center;
+  margin-top: 5vh;
+  background-color: rgb(28, 135, 218);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  min-width: 6vw;
+  min-height: 5vh;
+  font-weight: 400;
+}
+.gallery-item-description {
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px;
+  line-height: 1.3em;
+  -webkit-line-clamp: 3; /* if you change this, make sure to change the fallback line-height and height */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.gallery-item-likes {
+  position: absolute;
+  bottom: 1px;
+  left: 5px;
+  display: flex;
+  margin: 4px;
+}
+
+.gallery-item-num-likes {
+  margin-left: 8px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.gallery-item-likes-placeholder {
+  display: flex;
+  flex-direction: row;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gallery-item-num-likes-placeholder {
+  margin-left: 8px;
+}
+.gallery-item-description-placeholder {
+  text-align: left;
+  max-width: fit-content;
+  font-size: 16px;
+}
+.gallery-item-container-placeholder {
+  width: 20%;
+  margin: 0 1vw;
+  border-radius: 8px;
+  height: 20%;
+}
+.gallery-item-img-placeholder {
+  border-radius: 16px;
+  width: 100%;
+}
+svg path {
+  fill: black;
+  height: 10px;
 }
